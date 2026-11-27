@@ -29,8 +29,10 @@ remote() { ssh "$host" "sudo sh -c '$*'"; }   # commands must not contain single
 as_agent() { remote "cd $dir && runuser -u dmagent -- $*"; }
 
 copy_code() {
-  remote "rm -rf $dir/replies"
-  tar czf - agent.py replies | remote "tar xzf - --no-same-owner -C $dir && chown -R dmagent: $dir"
+  local files="agent.py replies"
+  [ -f reel_defaults.json ] && files="$files reel_defaults.json"
+  remote "rm -rf $dir/replies $dir/reel_defaults.json"
+  tar czf - $files | remote "tar xzf - --no-same-owner -C $dir && chown -R dmagent: $dir"
 }
 
 copy_state() {
