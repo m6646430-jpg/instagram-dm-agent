@@ -1,0 +1,18 @@
+[Unit]
+Description=Instagram DM agent, one pass
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=dmagent
+WorkingDirectory=/opt/dm-agent
+Environment=TZ=UTC
+ExecStart=/usr/bin/python3 /opt/dm-agent/agent.py run
+StandardOutput=append:/opt/dm-agent/agent.log
+StandardError=append:/opt/dm-agent/agent.log
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/opt/dm-agent

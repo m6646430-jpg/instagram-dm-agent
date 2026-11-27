@@ -1,0 +1,17 @@
+Hey! Here are my Instagram skills for Claude, free 🎁
+
+https://github.com/m6646430-jpg/instagram-skills
+
+11 skills: hooks, reel scripts, captions, carousels, weekly plan, replies, DM texts, profile audit, stats and repurposing.
+
+HOW TO INSTALL (2 minutes)
+1. Open the link and click Code → Download ZIP
+2. Unzip it
+3. Copy the folders inside "skills" into the .claude/skills folder in your home folder
+4. Open a new Claude session and say: "set up my Instagram brand"
+
+After that, just ask in plain words: "write a reel about X" or "caption for this video".
+
+It works in Claude Code and the Claude desktop app.
+
+Stuck on a step? Reply here.

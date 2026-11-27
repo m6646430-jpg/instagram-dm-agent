@@ -1,0 +1,6 @@
+.env
+sent.db
+sent.db.new
+agent.log
+__pycache__/
+.DS_Store
